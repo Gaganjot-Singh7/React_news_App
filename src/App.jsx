@@ -7,6 +7,7 @@ import Stories from './Stories.jsx'
 import './App.css'
 import { ContextProvider } from './Context.jsx'
 import reducer from './Reducer.jsx'
+import Header from './Header.jsx'
 function App() {
 
 
@@ -88,6 +89,7 @@ const Decrease=()=>{
     <>
       <ContextProvider value={{ ...state, removeIteam, DataEvent,Increase,Decrease }}>
         <div className='bg-purple-200'>
+          <Header/>
           <Search />
           <Pagination />
           <Stories />

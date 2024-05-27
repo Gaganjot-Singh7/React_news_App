@@ -1,10 +1,15 @@
-
+import { Link } from 'react-router-dom';
 import { useContextValue } from './Context.jsx';
 
 function Stories() {
 
     const { isLoading, hits,removeIteam } = useContextValue();
-
+const ScrollTop=()=>{
+    window.scrollTo({
+        top:0,
+        behavior:"smooth"
+    })
+}
 
     if (isLoading) {
         return <>
@@ -32,6 +37,8 @@ function Stories() {
                     </p>
                 </div>)
             })}
+
+            <button onClick={()=>ScrollTop() } className="text-center bg-black text-white p-3 rounded-2xl ">^</button>
         </>
 
 
