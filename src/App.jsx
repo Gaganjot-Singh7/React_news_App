@@ -36,7 +36,7 @@ function App() {
 
   const fetching = async () => {
     try {
-      const res = await fetch(`http://hn.algolia.com/api/v1/search?query=${state.query}&page=${state.page}`);
+      const res = await fetch(`https://hn.algolia.com/api/v1/search?query=${state.query}&page=${state.page}`);
       const data = await res.json();
       console.log("data of api ", data);
       dispatch({
